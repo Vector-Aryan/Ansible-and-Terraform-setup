@@ -1,0 +1,9 @@
+# Secrets
+*.pem
+
+# Terraform state (contains IPs, IDs, sometimes secrets)
+*.tfstate
+*.tfstate.*
+
+# Terraform working directory
+.terraform/
