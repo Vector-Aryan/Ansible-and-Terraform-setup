@@ -1,0 +1,6 @@
+- name: Hello Dosto
+  hosts: servers
+  become: true
+  tasks:
+    - name: Greet the user
+      command: echo "Hello, Dosto!"
