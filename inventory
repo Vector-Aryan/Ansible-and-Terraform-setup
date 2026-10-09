@@ -1,6 +1,6 @@
 [servers]
-server1 ansible_host=3.111.217.100
-server2 ansible_host=13.233.198.151
+server1 ansible_host=13.206.199.121
+server2 ansible_host=13.233.230.193
 server1 ansible_user=ubuntu
 server2 ansible_user=ubuntu
 

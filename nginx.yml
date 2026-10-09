@@ -1,0 +1,24 @@
+- name: Automate Nginx Installation
+  hosts: servers
+  become: true
+  tasks:
+    - name: Cache update
+      apt:
+        update_cache: yes
+
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+    - name: Copy Nginx HTMl file on servers
+      copy:
+        src: nginx.html
+        dest: /var/www/html/index.html
+    - name: retart Nginx service
+      service:
+        name: nginx
+        state: reloaded
+    - name: Enabled Nginx service
+      systemd_service:
+        name: nginx
+        enabled: true
